@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Homework5</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="user_name">Evolitist</string>
+    <string name="img_text">images</string>
+    <string name="post_text">posts</string>
+    <string name="subs_text">subscribers</string>
+    <string name="publication_date">Apr 1, 2022 20:00:04</string>
+    <string name="post_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</string>
+    <string name="user_status">just do it.</string>
+    <string name="profile">Profile</string>
+    <string name="logout">logout</string>
+    <string name="Img_text">Images</string>
+    <string name="Post_text">Post</string>
 </resources>

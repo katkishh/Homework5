@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewProfile">
+        <attr name="userName" format="string"/>
+        <attr name="userStatus" format="string"/>
+        <attr name="IMGNum" format="integer"/>
+        <attr name="subsNum" format="integer"/>
+        <attr name="postsNum" format="integer"/>
+        <attr name="btnColor" format="color"/>
+    </declare-styleable>
+</resources>
