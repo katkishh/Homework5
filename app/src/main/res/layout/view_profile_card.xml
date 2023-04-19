@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ViewUserProfile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewRound"
+            style="@style/RoundedImage"
+            android:layout_width="@dimen/image_round_size_profile"
+            android:layout_height="@dimen/image_round_size_profile"
+            android:layout_margin="16dp"
+            android:background="?attr/colorPrimaryInverse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/RoundedImage">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <TextView
+            android:layout_width="@dimen/initial_size"
+            android:layout_height="@dimen/initial_size"
+            android:gravity="center"
+            android:text="E"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewRound"
+            app:layout_constraintEnd_toEndOf="@id/imageViewRound"
+            app:layout_constraintStart_toStartOf="@id/imageViewRound"
+            app:layout_constraintTop_toTopOf="@id/imageViewRound" />
+
+        <TextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            android:text="@string/user_name"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewRound"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewUserStatus"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="@string/user_status"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewRound"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUserName" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:dividerColor="?attr/colorSurfaceVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUserStatus" />
+
+        <TextView
+            android:id="@+id/textViewIMGNum"
+            style="@style/TextViewNum"
+            android:layout_width="0dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="12"
+            app:layout_constraintEnd_toStartOf="@+id/textViewSubsNum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <TextView
+            android:id="@+id/textViewIMGText"
+            style="@style/TextViewText"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:text="@string/img_text"
+            app:layout_constraintEnd_toStartOf="@+id/textViewSubsText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIMGNum" />
+
+        <TextView
+            android:id="@+id/textViewSubsNum"
+            style="@style/TextViewNum"
+            android:layout_width="0dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="5"
+            app:layout_constraintEnd_toStartOf="@id/textViewPostsNum"
+            app:layout_constraintStart_toEndOf="@+id/textViewIMGNum"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <TextView
+            android:id="@+id/textViewSubsText"
+            style="@style/TextViewText"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:text="@string/subs_text"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPostsText"
+            app:layout_constraintStart_toEndOf="@+id/textViewIMGText"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSubsNum" />
+
+        <TextView
+            android:id="@+id/textViewPostsNum"
+            style="@style/TextViewNum"
+            android:layout_width="0dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewSubsNum"
+            app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+        <TextView
+            android:id="@+id/textViewPostsText"
+            style="@style/TextViewText"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:text="@string/post_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewSubsText"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPostsNum" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:dividerColor="?attr/colorSurfaceVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSubsText" />
+
+        <Button
+            android:id="@+id/buttonSubscribe"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="?attr/colorPrimaryInverse"
+            android:text="@string/subscribe"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
