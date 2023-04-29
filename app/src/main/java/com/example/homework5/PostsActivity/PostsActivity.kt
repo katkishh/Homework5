@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import com.example.homework5.PostsModel
 import com.example.homework5.databinding.ActivityPostBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PostsActivity: AppCompatActivity() {
 
     companion object{

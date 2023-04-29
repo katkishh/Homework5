@@ -1,17 +1,22 @@
-package com.example.homework5.MainActivity
+package com.example.homework5.MainActivity.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework5.*
 import com.example.homework5.ImagesActivity.ImagesActivity
+import com.example.homework5.MainActivity.data.remote.model.ProfileViewModel
 import com.example.homework5.PostsActivity.PostsActivity
 import com.example.homework5.databinding.ActivityMainBinding
 import com.example.homework5.databinding.ViewImagesCardBinding
 import com.example.homework5.databinding.ViewPostCardBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -23,6 +28,8 @@ class MainActivity : AppCompatActivity() {
     private val imagesAdapter by lazy{ ImagesAdapter() }
 
     private val postsAdapter by lazy { PostsAdapter() }
+
+    private val viewModel by viewModels<ProfileViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

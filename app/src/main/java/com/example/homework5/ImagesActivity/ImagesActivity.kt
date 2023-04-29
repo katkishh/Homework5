@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework5.ImagesListModel
 import com.example.homework5.databinding.ActivityImagesBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ImagesActivity: AppCompatActivity() {
 
     companion object{
