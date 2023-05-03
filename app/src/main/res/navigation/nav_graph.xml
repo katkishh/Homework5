@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.homework5.MainActivity.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_imagesFragment"
+            app:destination="@id/imagesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imagesFragment"
+        android:name="com.example.homework5.ImagesActivity.ImagesActivity"
+        android:label="fragment_images"
+        tools:layout="@layout/fragment_images">
+        <argument
+            android:name="imageList"
+            app:argType="string[]"
+            app:nullable="true"
+            />
+    </fragment>
+
+
+
+</navigation>
