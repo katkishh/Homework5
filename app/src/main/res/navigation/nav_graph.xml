@@ -13,19 +13,33 @@
         <action
             android:id="@+id/action_profileFragment_to_imagesFragment"
             app:destination="@id/imagesFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_postFragment"
+            app:destination="@id/postFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/imagesFragment"
-        android:name="com.example.homework5.ImagesActivity.ImagesActivity"
+        android:name="com.example.homework5.ImagesActivity.ImagesFragment"
         android:label="fragment_images"
         tools:layout="@layout/fragment_images">
         <argument
             android:name="imageList"
-            app:argType="string[]"
+            app:argType="com.example.homework5.MainActivity.Images_list_model"
             app:nullable="true"
             />
     </fragment>
 
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.example.homework5.PostsActivity.PostFragment"
+        android:label="PostFragment" >
+
+        <argument
+            android:name="post"
+            app:argType="com.example.homework5.MainActivity.models.posts_model"
+            app:nullable="true"/>
+    </fragment>
 
 
 </navigation>

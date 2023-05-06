@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.homework5.PostsModel
+import com.example.homework5.MainActivity.models.PostsModel
 import com.example.homework5.databinding.ViewPostCardBinding
 
 class PostsAdapter: ListAdapter<PostsModel, PostsAdapter.ViewHolder>(diffUtil){

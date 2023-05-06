@@ -28,7 +28,7 @@ class ImagesFragment: Fragment(R.layout.fragment_images) {
 
     private val imagesAdapter by lazy { ImagesGalleryAdapter() }
     private val binding by viewBinding(FragmentImagesBinding::bind)
-    private val args by navArgs<ImagesFra>()
+    private val args by navArgs<ImagesFrag>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
