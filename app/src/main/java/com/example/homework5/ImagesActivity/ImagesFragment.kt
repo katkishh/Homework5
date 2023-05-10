@@ -28,7 +28,7 @@ class ImagesFragment: Fragment(R.layout.fragment_images) {
 
     private val imagesAdapter by lazy { ImagesGalleryAdapter() }
     private val binding by viewBinding(FragmentImagesBinding::bind)
-    private val args by navArgs<ImagesFrag>()
+    private val args by navArgs<ImagesFragmentArgs>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -37,10 +37,12 @@ class ImagesFragment: Fragment(R.layout.fragment_images) {
             layoutManager = GridLayoutManager(context, 3, RecyclerView.VERTICAL, false)
         }
 
-        val imagesList = navArgs<>()
+        val imagesList = args.imageList?.map{
+
+        }
 
             //intent.getParcelableExtra<ImagesListModel>(images)
-        imagesAdapter.submitList(imagesList?.list)
+        imagesAdapter.submitList(imagesList)
 
         binding.toolbar.setNavigationOnClickListener {
 
