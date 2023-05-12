@@ -20,8 +20,7 @@ class ProfileViewModel @Inject constructor(
     fun getProfile(profileId:String = "evo"){
         viewModelScope.launch {
             getProfileUseCase.execute(profileId).also { profile ->
-               // _profileLiveData.value = profile
-                _profileLiveData.postValue(profile)     //спустя чуть-чуть времени запустит
+                _profileLiveData.postValue(profile)
             }
         }
     }

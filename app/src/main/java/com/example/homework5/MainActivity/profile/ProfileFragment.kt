@@ -1,4 +1,4 @@
-package com.example.homework5.MainActivity
+package com.example.homework5.MainActivity.profile
 
 import android.os.Bundle
 import android.view.View
@@ -9,20 +9,24 @@ import androidx.recyclerview.widget.ConcatAdapter
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.homework5.*
 import com.example.homework5.MainActivity.data.remote.model.ProfileViewModel
+import com.example.homework5.MainActivity.models.ImagesListModel
+import com.example.homework5.MainActivity.models.ImagesModel
 import com.example.homework5.MainActivity.models.PostsModel
-import com.example.homework5.MainActivity.presentation.PostsAdapter
+import com.example.homework5.MainActivity.models.UserBioModel
+import com.example.homework5.MainActivity.posts.PostsAdapter
 import com.example.homework5.databinding.FragmentProfileBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
-class ProfileFragment:Fragment(R.layout.fragment_profile) {
+class ProfileFragment: Fragment(R.layout.fragment_profile) {
     private val binding by viewBinding(FragmentProfileBinding::bind)
 
-    private val profileAdapter by lazy { ProfileAdapter() }
+    @Inject lateinit var profileAdapter: ProfileAdapter
 
-    private val imagesAdapter by lazy{ ImagesAdapter() }
+    @Inject lateinit var imagesAdapter: ImagesAdapter
 
-    private val postsAdapter by lazy { PostsAdapter() }
+    @Inject lateinit var postsAdapter: PostsAdapter
 
     private val viewModel by viewModels<ProfileViewModel>()
 
@@ -55,10 +59,8 @@ class ProfileFragment:Fragment(R.layout.fragment_profile) {
         profileAdapter.setUser(UserBioModel("Evolitist", "just do it.", 12, 5, 16))
         postsAdapter.submitList(postsList)
         postsAdapter.onClick = { post ->
-            //startActivity(PostsActivity.createIntent(this, post))
             findNavController().navigate(
-                R.id.action_profileFragment_to_postFragment
-
+                ProfileFragmentDirections.actionProfileFragmentToPostFragment(post)
             )
         }
 
@@ -66,7 +68,9 @@ class ProfileFragment:Fragment(R.layout.fragment_profile) {
         val imagesList = ImagesListModel(list = images, listSize = images.size)
         imagesAdapter.submitImages(imagesList)
         imagesAdapter.onClick = {list ->
-            //startActivity(ImagesActivity.createIntent(this, list))
+            findNavController().navigate(
+                ProfileFragmentDirections.actionProfileFragmentToImagesFragment(list)
+            )
         }
 
     }

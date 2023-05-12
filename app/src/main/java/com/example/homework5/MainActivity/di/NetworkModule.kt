@@ -3,7 +3,6 @@ package com.example.homework5.MainActivity.di
 import com.example.homework5.MainActivity.data.remote.NanoPostApiService
 import com.example.homework5.MainActivity.data.remote.PrefStorage
 import com.example.homework5.MainActivity.data.remote.model.NanoPostAuthApiService
-import com.example.homework5.MainActivity.data.remote.repository.NanoRepositoryImpl
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
@@ -11,8 +10,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
-import okhttp3.MediaType
-import okhttp3.MediaType.Companion.get
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Converter

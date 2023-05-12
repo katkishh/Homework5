@@ -12,4 +12,11 @@
     <string name="logout">logout</string>
     <string name="Img_text">Images</string>
     <string name="Post_text">Post</string>
+    <string name="images_amount">12</string>
+    <string name="subs_amount">5</string>
+    <string name="posts_amount">16</string>
+    <string name="like_amount">2</string>
+    <string name="new_post">New Post...</string>
+    <string name="add_img">Add image...</string>
+    <string name="submit">submit</string>
 </resources>

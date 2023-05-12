@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".PostsActivity.PostsActivity">
+    android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/ic_back"
@@ -111,27 +110,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewPostDescription" />
 
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/buttonLike"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="74dp"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:backgroundTint="?android:attr/colorBackground"
-                android:paddingStart="16dp"
-                android:paddingEnd="24dp"
-                android:text="2"
-                android:textColor="?attr/colorPrimary"
-                app:cornerRadius="100px"
+                android:text="@string/like_amount"
                 app:icon="@drawable/ic_like"
-                app:iconGravity="textStart"
-                app:iconPadding="8dp"
-                app:iconSize="18dp"
-                app:iconTint="?attr/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewPostImage"
-                app:strokeColor="?attr/colorOutline" />
+                app:layout_constraintTop_toBottomOf="@+id/imageViewPostImage" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

@@ -1,4 +1,4 @@
-package com.example.homework5.ImagesActivity
+package com.example.homework5.MainActivity.images
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,10 +6,11 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.homework5.ImagesModel
+import com.example.homework5.MainActivity.models.ImagesModel
 import com.example.homework5.databinding.ItemImageBinding
+import javax.inject.Inject
 
-class ImagesGalleryAdapter: ListAdapter<ImagesModel, ImagesGalleryAdapter.ViewHolder>(diffUtil){
+class ImagesGalleryAdapter @Inject constructor(): ListAdapter<ImagesModel, ImagesGalleryAdapter.ViewHolder>(diffUt){
 
     inner class ViewHolder(
         private val binding: ItemImageBinding
@@ -36,7 +37,7 @@ class ImagesGalleryAdapter: ListAdapter<ImagesModel, ImagesGalleryAdapter.ViewHo
 
 }
 
-val diffUtil = object : DiffUtil.ItemCallback<ImagesModel>(){
+val diffUt = object : DiffUtil.ItemCallback<ImagesModel>(){
     override fun areItemsTheSame(oldItem: ImagesModel, newItem: ImagesModel): Boolean {
         return oldItem.id == newItem.id
     }

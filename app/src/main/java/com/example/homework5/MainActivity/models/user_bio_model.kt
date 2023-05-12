@@ -1,4 +1,4 @@
-package com.example.homework5
+package com.example.homework5.MainActivity.models
 
 data class UserBioModel(
     val userName: String,

@@ -1,4 +1,4 @@
-package com.example.homework5.MainActivity.presentation
+package com.example.homework5.MainActivity.posts
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,8 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.homework5.MainActivity.models.PostsModel
 import com.example.homework5.databinding.ViewPostCardBinding
+import javax.inject.Inject
 
-class PostsAdapter: ListAdapter<PostsModel, PostsAdapter.ViewHolder>(diffUtil){
+class PostsAdapter @Inject constructor(): ListAdapter<PostsModel, PostsAdapter.ViewHolder>(diffUtil){
 
     var onClick: (PostsModel) -> Unit = {}
 

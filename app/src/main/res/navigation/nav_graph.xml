@@ -7,38 +7,54 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.homework5.MainActivity.ProfileFragment"
-        android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile">
+        android:name="com.example.homework5.MainActivity.profile.ProfileFragment"
+        android:label="ProfileFragment">
         <action
             android:id="@+id/action_profileFragment_to_imagesFragment"
             app:destination="@id/imagesFragment" />
         <action
             android:id="@+id/action_profileFragment_to_postFragment"
             app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_addPostFragment"
+            app:destination="@id/addPostFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/imagesFragment"
-        android:name="com.example.homework5.ImagesActivity.ImagesFragment"
-        android:label="fragment_images"
-        tools:layout="@layout/fragment_images">
+        android:name="com.example.homework5.MainActivity.images.ImagesFragment"
+        android:label="fragment_images">
         <argument
             android:name="imageList"
-            app:argType="com.example.homework5.MainActivity.Images_list_model"
+            app:argType="com.example.homework5.MainActivity.models.ImagesListModel"
             app:nullable="true"
             />
+        <action
+            android:id="@+id/action_imagesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/postFragment"
-        android:name="com.example.homework5.PostsActivity.PostFragment"
+        android:name="com.example.homework5.MainActivity.posts.PostFragment"
         android:label="PostFragment" >
 
         <argument
             android:name="post"
-            app:argType="com.example.homework5.MainActivity.models.posts_model"
+            app:argType="com.example.homework5.MainActivity.models.PostsModel"
             app:nullable="true"/>
+        <action
+            android:id="@+id/action_postFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.example.homework5.MainActivity.posts.add.AddPostFragment"
+        android:label="AddPostFragment" >
+        <action
+            android:id="@+id/action_addPostFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
 
 

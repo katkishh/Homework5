@@ -1,11 +1,13 @@
-package com.example.homework5
+package com.example.homework5.MainActivity.profile
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.homework5.MainActivity.models.UserBioModel
 import com.example.homework5.databinding.ViewProfileCardBinding
+import javax.inject.Inject
 
-class ProfileAdapter: RecyclerView.Adapter<ProfileAdapter.ViewHolder>(){
+class ProfileAdapter @Inject constructor(): RecyclerView.Adapter<ProfileAdapter.ViewHolder>(){
 
     private var thisUser: UserBioModel? = null
 

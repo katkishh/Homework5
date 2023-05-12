@@ -1,18 +1,20 @@
-package com.example.homework5
+package com.example.homework5.MainActivity.profile
 
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import coil.load
+import com.example.homework5.MainActivity.models.ImagesListModel
 import com.example.homework5.databinding.ViewImagesCardBinding
+import javax.inject.Inject
 
-class ImagesAdapter: RecyclerView.Adapter<ImagesAdapter.ImagesViewHolder>(){
+class ImagesAdapter @Inject constructor(): RecyclerView.Adapter<ImagesAdapter.ImagesViewHolder>(){
 
     var onClick: (ImagesListModel) -> Unit = {}
 
     private var imagesData : ImagesListModel? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImagesAdapter.ImagesViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImagesViewHolder {
         val binding = ViewImagesCardBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
@@ -23,7 +25,7 @@ class ImagesAdapter: RecyclerView.Adapter<ImagesAdapter.ImagesViewHolder>(){
 
     override fun getItemCount(): Int = 1
 
-    override fun onBindViewHolder(holder: ImagesAdapter.ImagesViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ImagesViewHolder, position: Int) {
         imagesData?.let { data ->
             holder.bind(data)
         }
