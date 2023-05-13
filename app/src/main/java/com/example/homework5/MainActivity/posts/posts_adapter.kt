@@ -43,6 +43,10 @@ class PostsAdapter @Inject constructor(): ListAdapter<PostsModel, PostsAdapter.V
         holder.bind(getItem(position))
     }
 
+    //fun submitData(lifecycle: Lifecycle, it: PagingData<Post>?) {
+
+    //}
+
 }
 
 val diffUtil = object : DiffUtil.ItemCallback<PostsModel>(){

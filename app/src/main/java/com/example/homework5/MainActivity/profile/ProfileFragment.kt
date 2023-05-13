@@ -73,5 +73,12 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
             )
         }
 
+        with(viewModel){
+            getProfile()
+            profileLiveData.observe(viewLifecycleOwner){
+
+            }
+        }
+
     }
 }

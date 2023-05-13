@@ -12,5 +12,9 @@ data class Profile (
     val subscribersCount:Int,
     val postsCount:Int,
     val imagesCount:Int,
-)
+){
+    //fun cachedIn(viewModelScope: CoroutineScope): Any {
+
+    // }
+}
 
