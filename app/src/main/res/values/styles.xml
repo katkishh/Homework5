@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundedImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="DividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="dividerColor">?attr/colorSurfaceVariant</item>
+    </style>
+
+    <style name="TextViewNum">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">?attr/colorSurfaceInverse</item>
+    </style>
+
+    <style name="TextViewText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">?attr/colorSurfaceInverse</item>
+    </style>
+
+    <style name="SmoothRectIMG">
+        <item name="android:src">@drawable/media_small</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_width">@dimen/image_latest_size</item>
+        <item name="android:layout_height">@dimen/image_latest_size</item>
+        <item name="android:scaleType">center</item>
+        <item name="layout_constraintHorizontal_chainStyle">spread</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+    
+    <style name="authError">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">?attr/colorError</item>
+    </style>
+
+</resources>

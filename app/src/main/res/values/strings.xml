@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">Homework5</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="user_name">Evolitist</string>
+    <string name="initial">E</string>
+    <string name="img_text">images</string>
+    <string name="post_text">posts</string>
+    <string name="subs_text">subscribers</string>
+    <string name="publication_date">Apr 1, 2022 20:00:04</string>
+    <string name="post_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</string>
+    <string name="user_status">just do it.</string>
+    <string name="profile">Profile</string>
+    <string name="logout">logout</string>
+    <string name="Img_text">Images</string>
+    <string name="Post_text">Post</string>
+    <string name="images_amount">12</string>
+    <string name="subs_amount">5</string>
+    <string name="posts_amount">16</string>
+    <string name="like_amount">2</string>
+    <string name="new_post">New Post...</string>
+    <string name="add_img">Add image...</string>
+    <string name="submit">submit</string>
+    <string name="Continue">Continue</string>
+    <string name="nano_post">NanoPost</string>
+    <string name="username_text">Username</string>
+    <string name="password_text">Password</string>
+    <string name="feed">Feed</string>
+    <string name="username_tooshort">Username must be longer than 3 characters</string>
+    <string name="username_toolong">Username must be shorter than 16 characters</string>
+    <string name="username_invalid_char">Username must contain only a-z, _ and .</string>
+    <string name="password_tooshort">Password must contain at least 8 characters</string>
+    <string name="empty_post">To create a post text or image is required</string>
+    <string name="error_network">There’s something wrong with your network connection</string>
+    <string name="error_unknown">There’s something wrong, please retry</string>
+    <string name="retry">Retry</string>
 </resources>

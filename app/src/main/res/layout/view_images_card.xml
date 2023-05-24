@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ViewUserImages"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/distance_cards">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewIMGText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/Img_text"
+            android:textColor="?attr/colorSurfaceInverse"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonToImages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButtonToImages"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="?android:attr/colorBackground"
+            android:src="@drawable/ic_chevron_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewIMGText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewFirstImage"
+            style="@style/SmoothRectIMG"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewSecondImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIMGText" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewSecondImage"
+            style="@style/SmoothRectIMG"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewThirdImage"
+            app:layout_constraintStart_toEndOf="@+id/imageViewFirstImage"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIMGText" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewThirdImage"
+            style="@style/SmoothRectIMG"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewLastImage"
+            app:layout_constraintStart_toEndOf="@+id/imageViewSecondImage"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIMGText" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewLastImage"
+            style="@style/SmoothRectIMG"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewThirdImage"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIMGText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
