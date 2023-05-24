@@ -3,8 +3,7 @@ package com.example.homework5.base
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.homework5.MainActivity.data.remote.LoadableResult
-import kotlinx.coroutines.CoroutineScope
+import com.example.homework5.data.remote.LoadableResult
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 
@@ -20,7 +19,7 @@ abstract class BaseViewModel: ViewModel() {
                 } catch (t: Throwable){
                     emit(LoadableResult.Error(t))
                 }
-            }.collect{ result ->             //создали флоу и сразу запускаем, потом сразу перекидывается в лайв-дату
+            }.collect{ result ->
                 postValue(result)
             }
         }

@@ -8,7 +8,8 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -31,7 +32,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imageViewRound"
+                android:id="@+id/imageViewAvatar"
                 android:layout_width="@dimen/image_round_size_post"
                 android:layout_height="@dimen/image_round_size_post"
                 android:layout_margin="16dp"
@@ -41,14 +42,15 @@
                 app:shapeAppearance="@style/RoundedImage" />
 
             <TextView
+                android:id="@+id/textViewInitial"
                 android:layout_width="@dimen/initial_size"
                 android:layout_height="@dimen/initial_size"
                 android:gravity="center"
                 android:text="E"
                 android:textColor="?attr/colorOnBackground"
                 android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@id/imageViewRound"
-                app:layout_constraintTop_toTopOf="@id/imageViewRound" />
+                app:layout_constraintStart_toStartOf="@id/imageViewAvatar"
+                app:layout_constraintTop_toTopOf="@id/imageViewAvatar" />
 
             <TextView
                 android:id="@+id/textViewUserName"
@@ -61,7 +63,7 @@
                 android:textColor="?attr/colorOnBackground"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imageViewRound"
+                app:layout_constraintStart_toEndOf="@id/imageViewAvatar"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -75,7 +77,7 @@
                 android:textColor="?attr/colorOnBackground"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imageViewRound"
+                app:layout_constraintStart_toEndOf="@id/imageViewAvatar"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.divider.MaterialDivider
@@ -101,14 +103,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dividerPost" />
 
-            <ImageView
-                android:id="@+id/imageViewPostImage"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/postsImagesRV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/media"
+                android:layout_margin="8dp"
+                android:paddingHorizontal="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewPostDescription" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewPostDescription"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/item_image_post" />
 
             <Button
                 android:id="@+id/buttonLike"
@@ -121,7 +127,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewPostImage" />
+                app:layout_constraintTop_toBottomOf="@+id/postsImagesRV" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

@@ -6,22 +6,22 @@
 
     <ImageView
         android:id="@+id/imageViewImage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="@dimen/image_add_size"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
         android:scaleType="center"
         android:src="@drawable/media"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewCancelImage"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageViewCancelImage" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewCancelImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="-4dp"
         android:src="@drawable/ic_image_cancel"
         app:layout_constraintEnd_toEndOf="@+id/imageViewImage"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/imageViewImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

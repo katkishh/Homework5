@@ -2,6 +2,7 @@
     <string name="app_name">Homework5</string>
     <string name="subscribe">Subscribe</string>
     <string name="user_name">Evolitist</string>
+    <string name="initial">E</string>
     <string name="img_text">images</string>
     <string name="post_text">posts</string>
     <string name="subs_text">subscribers</string>
@@ -19,4 +20,17 @@
     <string name="new_post">New Post...</string>
     <string name="add_img">Add image...</string>
     <string name="submit">submit</string>
+    <string name="Continue">Continue</string>
+    <string name="nano_post">NanoPost</string>
+    <string name="username_text">Username</string>
+    <string name="password_text">Password</string>
+    <string name="feed">Feed</string>
+    <string name="username_tooshort">Username must be longer than 3 characters</string>
+    <string name="username_toolong">Username must be shorter than 16 characters</string>
+    <string name="username_invalid_char">Username must contain only a-z, _ and .</string>
+    <string name="password_tooshort">Password must contain at least 8 characters</string>
+    <string name="empty_post">To create a post text or image is required</string>
+    <string name="error_network">There’s something wrong with your network connection</string>
+    <string name="error_unknown">There’s something wrong, please retry</string>
+    <string name="retry">Retry</string>
 </resources>
